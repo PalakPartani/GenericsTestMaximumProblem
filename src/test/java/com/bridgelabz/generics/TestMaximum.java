@@ -28,9 +28,8 @@ public class TestMaximum {
         int maximumNumber = testMaximumProblem.findMaximumNumber(3,5,15);
         Assert.assertEquals(15,maximumNumber);
     }
-
     @Test
-    public void givenMaxFloatNumberInIntegerAtFirstPosition_WhenProper_ShouldReturnTrue() {
+    public void givenMaxFloatNumberAtFirstPosition_WhenProper_ShouldReturnTrue() {
         Float maximumNumber = testMaximumProblem.findMaximumNumber(5.0f,3.0f,1.2f);
         Assert.assertEquals(5,maximumNumber,0.0);
     }
@@ -46,4 +45,19 @@ public class TestMaximum {
     }
 
 
+    @Test
+    public void givenMaxStringAtFirstPosition_WhenProper_ShouldReturnTrue() {
+        String maximumString = testMaximumProblem.findMaximumString("peach", "apple", "banana");
+        Assert.assertEquals("peach",maximumString);
+    }
+    @Test
+    public void givenMaxStringAtSecondPosition_WhenProper_ShouldReturnTrue() {
+        String maximumString = testMaximumProblem.findMaximumString("apple","peach","banana");
+        Assert.assertEquals("peach",maximumString);
+    }
+    @Test
+    public void givenMaxStringAtThirdPosition_WhenProper_ShouldReturnTrue() {
+        String maximumString = testMaximumProblem.findMaximumString("apple", "banana", "peach");
+        Assert.assertEquals("peach", maximumString);
+    }
 }
